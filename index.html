@@ -1,0 +1,2112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+
+    <!-- Preload Recursos Críticos -->
+    <!-- <link rel="preload" as="image" href="assets/img/hero-banner-low.webp" /> -->
+
+    <link
+      rel="preload"
+      href="assets/type/Avenir-Roman.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <!-- Calendly optimizado -->
+    <!-- <link rel="preconnect" href="https://assets.calendly.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://assets.calendly.com/assets/external/widget.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://assets.calendly.com/assets/external/widget.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://assets.calendly.com/assets/external/widget.css"
+      />
+    </noscript>
+
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    /> -->
+
+    <!-- Preload Swiper CSS -->
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      />
+    </noscript>
+
+    <!-- Preload GLightbox CSS -->
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+      />
+    </noscript>
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="css/app.css" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://covachilpancingo.com" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+
+    <!-- Google Maps Dependencies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      />
+    </noscript>
+
+    <!-- Metadatos Open Graph -->
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://covachilpancingo.com" />
+    <meta property="og:image" content="/assets/img/cova-share-img.png" />
+    <title>COVA Chilpancingo by Estrategia Urbana</title>
+  </head>
+  <body>
+    <!-- Header Desktop -->
+    <header class="main-header">
+      <div class="header-container">
+        <div class="logo">
+          <a href=""
+            ><img
+              src="assets/img/logo-header.svg"
+              alt="COVA Logo"
+              loading="lazy"
+          /></a>
+        </div>
+        <nav class="nav-menu">
+          <a href="#location" data-i18n="nav.location" class="nav-item"
+            >Location</a
+          >
+          <a href="#typologies" data-i18n="nav.amenities" class="nav-item"
+            >Typologies</a
+          >
+          <a href="#terraces" data-i18n="nav.residences" class="nav-item"
+            >Terraces</a
+          >
+          <!-- <a href="#construction" data-i18n="nav.construction" class="nav-item"
+            >Construction</a
+          > -->
+          <a href="#invest" data-i18n="nav.invest" class="nav-item"
+            >Why to Invest</a
+          >
+          <a href="#faqs" data-i18n="nav.faqs" class="nav-item">FAQs</a>
+        </nav>
+        <div class="header-right">
+          <a href="#contact" class="cta-button" data-i18n="cta.schedule"
+            >Schedule a Call</a
+          >
+          <div class="lang-selector">
+            <span id="lang-en" class="lang-option active">EN</span> /
+            <span id="lang-es" class="lang-option">ES</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Header Mobile -->
+    <div class="mobile-header">
+      <div class="lang-selector-mobile">
+        <span id="lang-en-m" class="lang-option active">EN</span> /
+        <span id="lang-es-m" class="lang-option">ES</span>
+      </div>
+      <div class="logo-mobile">
+        <a href=""
+          ><img src="assets/img/logo-header.svg" alt="The Wavve Logo"
+        /></a>
+      </div>
+      <button class="burger" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <button class="close-menu" aria-label="Close menu">×</button>
+      <nav class="mobile-nav">
+        <a href="#location" data-i18n="nav.location" class="mobile-nav-link"
+          >Location</a
+        >
+        <a href="#typologies" data-i18n="nav.amenities" class="mobile-nav-link"
+          >Typologies</a
+        >
+        <a href="#terraces" data-i18n="nav.residences" class="mobile-nav-link"
+          >Terraces</a
+        >
+        <!-- <a
+          href="#construction"
+          data-i18n="nav.construction"
+          class="mobile-nav-link"
+          >Construction</a
+        > -->
+        <a href="#invest" data-i18n="nav.invest" class="mobile-nav-link"
+          >Why to Invest</a
+        >
+        <a href="#faqs" data-i18n="nav.faqs" class="mobile-nav-link">FAQs</a>
+        <a href="#contact" class="cta-button-mobile" data-i18n="cta.schedule"
+          >Schedule a Call</a
+        >
+      </nav>
+    </div>
+
+    <!-- Hero Section-->
+    <section class="hero-banner">
+      <img
+        src="assets/img/hero-banner-low.webp"
+        data-highres="assets/img/hero-banner.webp"
+        alt="COVA Chilpancingo"
+        class="hero-bg"
+        decoding="async"
+        fetchpriority="low"
+        loading="eager"
+      />
+      <!-- <div class="hero-content">
+        <h1 class="hero-title" data-i18n="hero.title">
+          INTRODUCING PHASE II: SUNSET TOWER
+        </h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">INVEST NOW</p>
+      </div> -->
+    </section>
+
+    <!-- Transition Banner -->
+    <section class="transition-banner">
+      <div class="transition-text">
+        <h2 data-i18n="transition.line1">Zona de alta plusvalía,</h2>
+        <p data-i18n="transition.line2">lista para crecer.</p>
+      </div>
+    </section>
+
+    <!-- Google Maps Container -->
+    <section class="map-wrapper" id="location">
+      <div class="master-map">
+        <button
+          class="category-selector__mobile js-selector-open"
+          aria-label="Show options in map"
+        >
+          Show options <span class="material-symbols-outlined">sort</span>
+        </button>
+        <nav class="category-selector">
+          <button
+            class="category-selector__close js-selector-close"
+            aria-label="Category selector"
+          >
+            Close
+          </button>
+          <ul>
+            <li>
+              <button
+                class="js-all button-icon"
+                aria-label="View all locations"
+              >
+                <span class="material-symbols-outlined">map</span>
+                View All Locations
+              </button>
+            </li>
+            <li>
+              <button
+                data-zone="cova"
+                class="button-icon"
+                aria-label="Map selector"
+              >
+                <span class="material-symbols-outlined">home</span>
+                COVA Chilpancingo
+              </button>
+            </li>
+            <li>
+              <p class="category-open js-category-open">
+                <i class="category-selector__icon selector--color1"></i>
+                <span>Entertainment</span>
+              </p>
+              <ul class="category-selector__hide" style="display: none">
+                <li>
+                  <button data-zone="castizo" aria-label="Map selector">
+                    Castizo
+                  </button>
+                </li>
+                <li>
+                  <button
+                    data-zone="roberta-trattoria"
+                    aria-label="Map selector"
+                  >
+                    Roberta Trattoria
+                  </button>
+                </li>
+                <li>
+                  <button data-zone="hookah-lounge" aria-label="Map selector">
+                    Hookah Lounge
+                  </button>
+                </li>
+                <li>
+                  <button
+                    data-zone="mendl-delicatessen"
+                    aria-label="Map selector"
+                  >
+                    Mendl Delicatessen
+                  </button>
+                </li>
+                <li>
+                  <button data-zone="patagonia" aria-label="Map selector">
+                    Patagonia
+                  </button>
+                </li>
+                <li>
+                  <button data-zone="maque-condesa" aria-label="Map selector">
+                    Maque Condesa
+                  </button>
+                </li>
+                <li>
+                  <button data-zone="caiman-bar" aria-label="Map selector">
+                    Caimán Bar
+                  </button>
+                </li>
+                <li>
+                  <button data-zone="pescadito-roma" aria-label="Map selector">
+                    El Pescadito Roma
+                  </button>
+                </li>
+                <li>
+                  <button data-zone="central-roma" aria-label="Map selector">
+                    Central Roma Sur
+                  </button>
+                </li>
+                <li>
+                  <button data-zone="parque-mexico" aria-label="Map selector">
+                    Parque México
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p class="category-open js-category-open">
+                <i class="category-selector__icon selector--color2"></i>
+                <span>Wellness</span>
+              </p>
+              <ul class="category-selector__hide" style="display: none">
+                <li>
+                  <button data-zone="cova-nuevo-leon" aria-label="Map selector">
+                    COVA Nuevo León
+                  </button>
+                </li>
+                <li>
+                  <button data-zone="andaz-condesa" aria-label="Map selector">
+                    Andaz Condesa
+                  </button>
+                </li>
+                <li>
+                  <button
+                    data-zone="hospital-angeles"
+                    aria-label="Map selector"
+                  >
+                    Hospital Ángeles Metropolitano
+                  </button>
+                </li>
+                <li>
+                  <button data-zone="medica-dalinde" aria-label="Map selector">
+                    Torre Médica Dalinde
+                  </button>
+                </li>
+                <li>
+                  <button
+                    data-zone="commando-condesa"
+                    aria-label="Map selector"
+                  >
+                    COMMANDO Condesa
+                  </button>
+                </li>
+                <li>
+                  <button data-zone="mukta-yoga" aria-label="Map selector">
+                    Mukta Yoga
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div id="map"></div>
+      </div>
+    </section>
+
+    <!-- Driving Distance -->
+    <section class="walking-driving">
+      <!-- Bloque LEFT (padre) -->
+      <div class="parent-left">
+        <!-- Título -->
+        <div class="title" role="heading" aria-level="3">
+          <span data-i18n="walkingDriving.left.title">WALKING</span>
+        </div>
+
+        <!-- Dos columnas internas -->
+        <div class="inner">
+          <div class="inner-left">
+            <div>
+              <span data-i18n="walkingDriving.left.innerLeft.item1"
+                >Restaurante Castizo</span
+              >
+            </div>
+            <div>
+              <span data-i18n="walkingDriving.left.innerLeft.item2"
+                >Parque México</span
+              >
+            </div>
+            <div>
+              <span data-i18n="walkingDriving.left.innerLeft.item3"
+                >Maque Condesa</span
+              >
+            </div>
+            <div>
+              <span data-i18n="walkingDriving.left.innerLeft.item4"
+                >Ojo de Agua</span
+              >
+            </div>
+            <div>
+              <span data-i18n="walkingDriving.left.innerLeft.item5"
+                >Andaz Condesa</span
+              >
+            </div>
+            <div>
+              <span data-i18n="walkingDriving.left.innerLeft.item6"
+                >COMMANDO Condesa</span
+              >
+            </div>
+            <div>
+              <span data-i18n="walkingDriving.left.innerLeft.item7"
+                >Mukta Yoga</span
+              >
+            </div>
+          </div>
+
+          <div class="inner-right">
+            <div>
+              <span data-i18n="walkingDriving.left.innerRight.item1"
+                >2 minutes</span
+              >
+            </div>
+            <div>
+              <span data-i18n="walkingDriving.left.innerRight.item2"
+                >5 minutes</span
+              >
+            </div>
+            <div>
+              <span data-i18n="walkingDriving.left.innerRight.item3"
+                >5 minutes</span
+              >
+            </div>
+            <div>
+              <span data-i18n="walkingDriving.left.innerRight.item4"
+                >5 minutes</span
+              >
+            </div>
+            <div>
+              <span data-i18n="walkingDriving.left.innerRight.item5"
+                >6 minutes</span
+              >
+            </div>
+            <div>
+              <span data-i18n="walkingDriving.left.innerRight.item6"
+                >6 minutes</span
+              >
+            </div>
+            <div>
+              <span data-i18n="walkingDriving.left.innerRight.item7"
+                >6 minutes</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloque RIGHT (padre) -->
+      <div class="parent-right">
+        <!-- Título -->
+        <div class="title" role="heading" aria-level="3">
+          <span data-i18n="walkingDriving.right.title">DRIVING</span>
+        </div>
+
+        <!-- Dos columnas internas -->
+        <div class="inner">
+          <div class="inner-left">
+            <div>
+              <span data-i18n="walkingDriving.right.innerLeft.item1"
+                >Caimán Bar</span
+              >
+            </div>
+            <div>
+              <span data-i18n="walkingDriving.right.innerLeft.item2"
+                >Roberta Trattoria</span
+              >
+            </div>
+            <div>
+              <span data-i18n="walkingDriving.right.innerLeft.item3"
+                >Hospital Ángeles Metropolitano</span
+              >
+            </div>
+            <div>
+              <span data-i18n="walkingDriving.right.innerLeft.item4"
+                >Restaurante Patagonia</span
+              >
+            </div>
+            <div>
+              <span data-i18n="walkingDriving.right.innerLeft.item5"
+                >Hooka Lounge</span
+              >
+            </div>
+            <div>
+              <span data-i18n="walkingDriving.right.innerLeft.item6"
+                >Terraza Central Roma Sur</span
+              >
+            </div>
+            <div>
+              <span data-i18n="walkingDriving.right.innerLeft.item7"
+                >Torre Médica Dalinde</span
+              >
+            </div>
+          </div>
+
+          <div class="inner-right">
+            <div>
+              <span data-i18n="walkingDriving.right.innerRight.item1"
+                >5 minutes</span
+              >
+            </div>
+            <div>
+              <span data-i18n="walkingDriving.right.innerRight.item2"
+                >6 minutes</span
+              >
+            </div>
+            <div>
+              <span data-i18n="walkingDriving.right.innerRight.item3"
+                >6 minutes</span
+              >
+            </div>
+            <div>
+              <span data-i18n="walkingDriving.right.innerRight.item4"
+                >7 minutes</span
+              >
+            </div>
+            <div>
+              <span data-i18n="walkingDriving.right.innerRight.item5"
+                >7 minutes</span
+              >
+            </div>
+            <div>
+              <span data-i18n="walkingDriving.right.innerRight.item6"
+                >8 minutes</span
+              >
+            </div>
+            <div>
+              <span data-i18n="walkingDriving.right.innerRight.item7"
+                >8 minutes</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tipologías Slider -->
+     <section id="typologies">
+      <h3 class="slider-title-3" data-i18n="tipologias.title">TYPOLOGIES</h3>
+      <div class="swiper tipologias-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" data-title="Tipology A204">
+            <img src="assets/img/tipologias-a-204.webp"
+            srcset=""
+            sizes="100vw"
+              alt="A204"
+              loading="lazy"
+            />
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-tipologies"
+              href="assets/img/tipologias-a-204.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+          <div class="swiper-slide" data-title="Tipology A302">
+            <img src="assets/img/tipologias-a-302.webp"
+            srcset=""
+            sizes="100vw"
+              alt="A302"
+              loading="lazy"
+            />
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-tipologies"
+              href="assets/img/tipologias-a-302.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+          <div class="swiper-slide" data-title="Tipology A402">
+            <img src="assets/img/tipologias-a-402.webp"
+            srcset=""
+            sizes="100vw"
+              alt="A402"
+              loading="lazy"
+            />
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-tipologies"
+              href="assets/img/tipologias-a-402.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+          <div class="swiper-slide" data-title="Tipology A404">
+            <img src="assets/img/tipologias-a-404.webp"
+            srcset=""
+            sizes="100vw"
+              alt="A404"
+              loading="lazy"
+            />
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-tipologies"
+              href="assets/img/tipologias-a-404.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+          <div class="swiper-slide" data-title="Tipology GHA404">
+            <img src="assets/img/tipologias-gh-a-102.webp"
+            srcset=""
+            sizes="100vw"
+              alt="GHA404"
+              loading="lazy"
+            />
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-tipologies"
+              href="assets/img/tipologias-gh-a-102.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+          <div class="swiper-slide" data-title="Tipology GHC103">
+            <img src="assets/img/tipologias-gh-c-103.webp"
+            srcset=""
+            sizes="100vw"
+              alt="GHC103"
+              loading="lazy"
+            />
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-tipologies"
+              href="assets/img/tipologias-gh-c-103.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+          <div class="swiper-slide" data-title="Tipology GHC104">
+            <img src="assets/img/tipologias-gh-c-104.webp"
+            srcset=""
+            sizes="100vw"
+              alt="GHC104"
+              loading="lazy"
+            />
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-tipologies"
+              href="assets/img/tipologias-gh-c-104.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+          <div class="swiper-slide" data-title="Tipology PHA101">
+            <img src="assets/img/tipologias-ph-a-101.webp"
+            srcset=""
+            sizes="100vw"
+              alt="PHA101"
+              loading="lazy"
+            />
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-tipologies"
+              href="assets/img/tipologias-ph-a-101.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+          <div class="swiper-slide" data-title="Tipology PHA502">
+            <img src="assets/img/tipologias-ph-a-502.webp"
+            srcset=""
+            sizes="100vw"
+              alt="PHA502"
+              loading="lazy"
+            />
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-tipologies"
+              href="assets/img/tipologias-ph-a-502.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+          <div class="swiper-slide" data-title="Tipology PHB503">
+            <img src="assets/img/tipologias-ph-b-503.webp"
+            srcset=""
+            sizes="100vw"
+              alt="PHB503"
+              loading="lazy"
+            />
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-tipologies"
+              href="assets/img/tipologias-ph-b-503.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+          <div class="swiper-slide" data-title="Tipology PHC501">
+            <img src="assets/img/tipologias-ph-c-501.webp"
+            srcset=""
+            sizes="100vw"
+              alt="PHC501"
+              loading="lazy"
+            />
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-tipologies"
+              href="assets/img/tipologias-ph-c-501.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+          <div class="swiper-slide" data-title="Tipology PHC502">
+            <img src="assets/img/tipologias-ph-c-502.webp"
+            srcset=""
+            sizes="100vw"
+              alt="PHC502"
+              loading="lazy"
+            />
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-tipologies"
+              href="assets/img/tipologias-ph-c-502.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+          <div class="swiper-slide" data-title="Tipology PHC503">
+            <img src="assets/img/tipologias-ph-c-503.webp"
+            srcset=""
+            sizes="100vw"
+              alt="PHC503"
+              loading="lazy"
+            />
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-tipologies"
+              href="assets/img/tipologias-ph-c-503.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+          <div class="swiper-slide" data-title="Tipology PHC504">
+            <img src="assets/img/tipologias-ph-c-504.webp"
+            srcset=""
+            sizes="100vw"
+              alt="PHC504"
+              loading="lazy"
+            />
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-tipologies"
+              href="assets/img/tipologias-ph-c-504.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+        </div>
+        
+      </div>
+     </section>
+
+     <!-- Custom Nav -->
+    <div class="custom-nav">
+      <button class="custom-prev tipologias-prev">◀</button>
+      <!-- <div class="swiper-pagination experiences-pagination"></div> -->
+      <button class="custom-next tipologias-next">▶</button>
+    </div>
+
+    <!-- Exteriores Slider -->
+    <section class="exteriores-slider" id="terraces">
+      <h3 class="slider-title-3" data-i18n="exteriores.title">TERRACES</h3>
+      <div class="swiper exteriores-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" data-title="Terraza A 03">
+            <img
+              src="assets/img/1-exteriores-terraza-a-03.webp"
+              srcset="
+                assets/img/1-exteriores-terraza-a-03-600.webp   600w,
+                assets/img/1-exteriores-terraza-a-03-900.webp   900w,
+                assets/img/1-exteriores-terraza-a-03-1200.webp 1200w,
+                assets/img/1-exteriores-terraza-a-03-1600.webp 1600w,
+                assets/img/1-exteriores-terraza-a-03.webp      2000w
+              "
+              sizes="100vw"
+              alt="Terraza A 03"
+              loading="lazy"
+            />
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-exteriores"
+              href="assets/img/1-exteriores-terraza-a-03.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+
+          <div class="swiper-slide" data-title="Terraza Depa 501">
+            <img
+              src="assets/img/2-exteriores-terraza-depa-501.webp"
+              srcset="
+                assets/img/2-exteriores-terraza-depa-501-600.webp   600w,
+                assets/img/2-exteriores-terraza-depa-501-900.webp   900w,
+                assets/img/2-exteriores-terraza-depa-501-1200.webp 1200w,
+                assets/img/2-exteriores-terraza-depa-501-1600.webp 1600w,
+                assets/img/2-exteriores-terraza-depa-501.webp      2000w
+              "
+              sizes="100vw"
+              alt="Terraza 501"
+              loading="lazy"
+            />
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-exteriores"
+              href="assets/img/2-exteriores-terraza-depa-501.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+
+          <div class="swiper-slide" data-title="Terraza A 03">
+            <img
+              src="assets/img/3-exteriores-terraza-a-03.webp"
+              srcset="
+                assets/img/3-exteriores-terraza-a-03-600.webp   600w,
+                assets/img/3-exteriores-terraza-a-03-900.webp   900w,
+                assets/img/3-exteriores-terraza-a-03-1200.webp 1200w,
+                assets/img/3-exteriores-terraza-a-03-1600.webp 1600w,
+                assets/img/3-exteriores-terraza-a-03.webp      2000w
+              "
+              sizes="100vw"
+              alt="Terraza A 03"
+              loading="lazy"
+            />
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-exteriores"
+              href="assets/img/3-exteriores-terraza-a-03.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+
+          <div class="swiper-slide" data-title="Terraza B 01">
+            <img
+              src="assets/img/4-exteriores-terraza-b-01.webp"
+              srcset="
+                assets/img/4-exteriores-terraza-b-01-600.webp   600w,
+                assets/img/4-exteriores-terraza-b-01-900.webp   900w,
+                assets/img/4-exteriores-terraza-b-01-1200.webp 1200w,
+                assets/img/4-exteriores-terraza-b-01-1600.webp 1600w,
+                assets/img/4-exteriores-terraza-b-01.webp      2000w
+              "
+              sizes="100vw"
+              alt="Terraza B 01"
+              loading="lazy"
+            />
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-exteriores"
+              href="assets/img/4-exteriores-terraza-b-01.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom Nav -->
+    <div class="custom-nav">
+      <button class="custom-prev exteriores-prev">◀</button>
+      <!-- <div class="swiper-pagination experiences-pagination"></div> -->
+      <button class="custom-next exteriores-next">▶</button>
+    </div>
+
+    <!-- Parallax -->
+    <section class="parallax-divider" aria-label="Separador visual">
+      <div class="parallax-divider__overlay"></div>
+      <!-- Contenido opcional centrado -->
+      <!-- <h2 class="parallax-divider__title">Tu mensaje aquí</h2> -->
+    </section>
+
+    <!-- Vistas Slider -->
+    <section class="vistas-slider">
+      <div class="swiper vistas-swiper">
+        <h3 class="slider-title-3" data-i18n="vistas.title">VIEWS</h3>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" data-title="Lobby">
+            <img
+              src="assets/img/1-vistas-lobby.webp"
+              srcset="
+                assets/img/1-vistas-lobby-600.webp   600w,
+                assets/img/1-vistas-lobby-900.webp   900w,
+                assets/img/1-vistas-lobby-1200.webp 1200w,
+                assets/img/1-vistas-lobby.webp      2000w
+              "
+              sizes="100vw"
+              alt="Lobby"
+              loading="lazy"
+            />
+            <div class="overlay-2">
+              <h3 data-i18n="vitas.slider.lobby">Lobby</h3>
+            </div>
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-vistas"
+              href="assets/img/1-vistas-lobby.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+
+          <div class="swiper-slide" data-title="Depa 203">
+            <img
+              src="assets/img/2-vistas-depa-203.webp"
+              srcset="
+                assets/img/2-vistas-depa-203-600.webp   600w,
+                assets/img/2-vistas-depa-203-900.webp   900w,
+                assets/img/2-vistas-depa-203-1200.webp 1200w,
+                assets/img/2-vistas-depa-203.webp      2000w
+              "
+              sizes="100vw"
+              alt="Depa 203"
+              loading="lazy"
+            />
+            <div class="overlay-2">
+              <h3 data-i18n="vitas.slider.depa.203">Apartment 203</h3>
+            </div>
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-vistas"
+              href="assets/img/2-vistas-depa-203.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+
+          <div class="swiper-slide" data-title="Comedor">
+            <img
+              src="assets/img/3-vistas-comedor.webp"
+              srcset="
+                assets/img/3-vistas-comedor-600.webp   600w,
+                assets/img/3-vistas-comedor-900.webp   900w,
+                assets/img/3-vistas-comedor-1200.webp 1200w,
+                assets/img/3-vistas-comedor.webp      2000w
+              "
+              sizes="100vw"
+              alt="Comedor"
+              loading="lazy"
+            />
+            <div class="overlay-2">
+              <h3 data-i18n="vistas.slider.comedor">Comedor</h3>
+            </div>
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-vistas"
+              href="assets/img/3-vistas-comedor.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+
+          <div class="swiper-slide" data-title="Terraza A">
+            <img
+              src="assets/img/4-vistas-terraza-a.webp"
+              srcset="
+                assets/img/4-vistas-terraza-a-600.webp   600w,
+                assets/img/4-vistas-terraza-a-900.webp   900w,
+                assets/img/4-vistas-terraza-a-1200.webp 1200w,
+                assets/img/4-vistas-terraza-a.webp      2000w
+              "
+              sizes="100vw"
+              alt="Terraza A"
+              loading="lazy"
+            />
+            <div class="overlay-2">
+              <h3 data-i18n="vistas.slider.terraza.a">Terraza A</h3>
+            </div>
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-vistas"
+              href="assets/img/4-vistas-terraza-a.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom Nav -->
+    <div class="custom-nav">
+      <button class="custom-prev vistas-prev">◀</button>
+      <!-- <div class="swiper-pagination residences-pagination"></div> -->
+      <button class="custom-next vistas-next">▶</button>
+    </div>
+
+    <!-- Views Slider -->
+    <!-- <section class="views-slider">
+      <h3 class="slider-title-3" data-i18n="views.title">
+        OCEAN VIEWS FROM EVERY CONDO
+      </h3>
+
+      <div class="swiper views-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" data-title="North-West View | 4 Floor">
+            <img
+              src="assets/img/views-sunrise-north-west-floor-4.webp"
+              srcset="
+                assets/img/views-sunrise-north-west-floor-4-600.webp   600w,
+                assets/img/views-sunrise-north-west-floor-4-900.webp   900w,
+                assets/img/views-sunrise-north-west-floor-4-1200.webp 1200w,
+                assets/img/views-sunrise-north-west-floor-4-1600.webp 1600w,
+                assets/img/views-sunrise-north-west-floor-4.webp      2000w
+              "
+              sizes="100vw"
+              alt="North west view from floor 4"
+              loading="lazy"
+            />
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-views"
+              href="assets/img/views-sunrise-north-west-floor-4.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+
+          <div class="swiper-slide" data-title="South-West View | 7 Floor">
+            <img
+              src="assets/img/views-sunrise-south-west-floor-7.webp"
+              srcset="
+                assets/img/views-sunrise-south-west-floor-7-600.webp   600w,
+                assets/img/views-sunrise-south-west-floor-7-900.webp   900w,
+                assets/img/views-sunrise-south-west-floor-7-1200.webp 1200w,
+                assets/img/views-sunrise-south-west-floor-7-1600.webp 1600w,
+                assets/img/views-sunrise-south-west-floor-7.webp      2000w
+              "
+              sizes="100vw"
+              alt="South west view from floor 7"
+              loading="lazy"
+            />
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-views"
+              href="assets/img/views-sunrise-south-west-floor-7.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+
+          <div class="swiper-slide" data-title="North-West View | 12 Floor">
+            <img
+              src="assets/img/views-sunrise-north-west-floor-12.webp"
+              srcset="
+                assets/img/views-sunrise-north-west-floor-12-600.webp   600w,
+                assets/img/views-sunrise-north-west-floor-12-900.webp   900w,
+                assets/img/views-sunrise-north-west-floor-12-1200.webp 1200w,
+                assets/img/views-sunrise-north-west-floor-12-1600.webp 1600w,
+                assets/img/views-sunrise-north-west-floor-12.webp      2000w
+              "
+              sizes="100vw"
+              alt="North west view from floor 12"
+              loading="lazy"
+            />
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-views"
+              href="assets/img/views-sunrise-north-west-floor-12.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+
+          <div class="swiper-slide" data-title="South-West View | 17 Floor">
+            <img
+              src="assets/img/views-sunrise-south-west-floor-17.webp"
+              srcset="
+                assets/img/views-sunrise-south-west-floor-17-600.webp   600w,
+                assets/img/views-sunrise-south-west-floor-17-900.webp   900w,
+                assets/img/views-sunrise-south-west-floor-17-1200.webp 1200w,
+                assets/img/views-sunrise-south-west-floor-17-1600.webp 1600w,
+                assets/img/views-sunrise-south-west-floor-17.webp      2000w
+              "
+              sizes="100vw"
+              alt="South west view from floor 17"
+              loading="lazy"
+            />
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-views"
+              href="assets/img/views-sunrise-south-west-floor-17.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+
+          <div class="swiper-slide" data-title="North-West View | 19 Floor">
+            <img
+              src="assets/img/views-sunrise-north-west-floor-19.webp"
+              srcset="
+                assets/img/views-sunrise-north-west-floor-19-600.webp   600w,
+                assets/img/views-sunrise-north-west-floor-19-900.webp   900w,
+                assets/img/views-sunrise-north-west-floor-19-1200.webp 1200w,
+                assets/img/views-sunrise-north-west-floor-19-1600.webp 1600w,
+                assets/img/views-sunrise-north-west-floor-19.webp      2000w
+              "
+              sizes="100vw"
+              alt="North west view from floor 19"
+              loading="lazy"
+            />
+            <a
+              class="zoom-btn"
+              data-glightbox="gallery-views"
+              href="assets/img/views-sunrise-north-west-floor-19.webp"
+              aria-label="Open image in lightbox"
+            >
+              <img
+                src="assets/ico/ico-img-zoom.svg"
+                alt="Zoom image button icon"
+                class="zoom-ico"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="caption-wrapper-3">
+        <div class="caption-3" id="caption3"></div>
+      </div>
+    </section> -->
+
+    <!-- Bullets y flechas -->
+    <!-- <div class="custom-nav">
+      <button class="custom-prev views-prev">◀</button>
+      <div class="swiper-pagination views-pagination"></div>
+      <button class="custom-next views-next">▶</button>
+    </div> -->
+
+    <!-- Seal Icon -->
+    <section class="seal-icon-container">
+      <div class="sealIcon">
+        <img src="assets/ico/ico-cova-rounded.svg" alt="Decorative Icon" />
+      </div>
+    </section>
+
+    <!-- Slider Creatives & Creators-->
+    <section class="creatives-section">
+      <h3 class="slider-title-3" data-i18n="creatives.title">
+        CREATIVES & CREATORS
+      </h3>
+
+      <div class="swiper creatives-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="assets/img/creatives-estrategia-urbana.png"
+              alt="Executives from Estrategia Urbana"
+            />
+            <div class="overlay-4">
+              <h4 data-i18n="creatives.slider.estrategia.title">
+                ESTRATEGIA URBANA
+              </h4>
+              <p data-i18n="creatives.slider.estrategia.text">
+                From planning to execution, Estrategia Urbana leads the
+                development of The Wavve with a clear commitment to quality and
+                certainty.
+              </p>
+              <a href="https://estrategiaurbana.com.mx/" target="_blank">
+                estrategiaurbana.com.mx
+              </a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img
+              src="assets/img/creatives-kalinka-mikel.png"
+              alt="Kalinka Mikel. Creative & Interior Designer"
+            />
+            <div class="overlay-4">
+              <h4 data-i18n="creatives.slider.kalinka.title">
+                KALINKA MIKEL INTERIOR DESIGN STUDIO
+              </h4>
+              <p data-i18n="creatives.slider.kalinka.text">
+                Kalinka Mikel Studio created warm, contemporary interiors where
+                textures, light and materiality elevate the everyday experience.
+              </p>
+              <a href="https://www.kalinkamikel.com/" target="_blank">
+                kalinkamikel.com
+              </a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img
+              src="assets/img/creatives-hacer.png"
+              alt="Hacer: Architechture Studio"
+            />
+            <div class="overlay-4">
+              <h4 data-i18n="creatives.slider.hacer.title">HACER:</h4>
+              <p data-i18n="creatives.slider.hacer.text">
+                Architecture firm specialized in designing real estate
+                developments. For us, design is a tool to enhance quality of
+                life.
+              </p>
+              <a href="https://www.hacer.com.mx/" target="_blank">
+                hacer.com.mx
+              </a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="assets/img/creatives-tepetl.png" alt="Tepetl" />
+            <div class="overlay-4">
+              <h4 data-i18n="creatives.slider.tepetl.title">TEPETL PAISAJE</h4>
+              <p data-i18n="creatives.slider.tepetl.text">
+                Tepetl's design concept is rooted in an organic vision, where
+                curved, fluid planter shapes contrast with the clean,
+                rectilinear geometry of the architecture.
+              </p>
+              <a
+                href="https://www.instagram.com/tepetl_paisaje/"
+                target="_blank"
+              >
+                @tepetel
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bullets y flechas -->
+      <div class="custom-nav">
+        <button class="custom-prev creatives-prev">◀</button>
+        <!-- <div class="swiper-pagination views-pagination"></div> -->
+        <button class="custom-next creatives-next">▶</button>
+      </div>
+    </section>
+
+    <!-- Visual Rest 1 Section -->
+    <!-- <section class="rest-beach">
+      <div class="rest-image-container">
+        <img
+          src="assets/img/rest-section-beach-opt.webp"
+          alt="Drone photograpg showing coastal views"
+          loading="lazy"
+        />
+      </div>
+    </section> -->
+
+    <!-- Construction Video Section -->
+    <!-- <section class="construction-video-section" id="construction">
+      <div class="construction-container">
+        <h2 class="video-title" data-i18n="video.title">CONSTRUCTION</h2>
+      </div>
+
+      <div class="video-placeholder">
+        <img
+          id="openVideoModal"
+          src="assets/img/video-poster.webp"
+          alt="Construction video preview"
+          loading="lazy"
+        />
+      </div>
+
+      <h2 class="video-date" data-i18n="video.date">
+        Last update: May 28th, 2025
+      </h2>
+
+      <div class="video-modal hidden" id="videoModal">
+        <div class="video-content">
+          <button
+            class="video-close"
+            id="closeVideoModal"
+            aria-label="Close video modal"
+          >
+            ✕
+          </button>
+          <video id="videoPlayer" controls>
+            <source src="assets/vid/TheWavve360.mp4" type="video/mp4" />
+            Tu navegador no soporta video HTML5.
+          </video>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Why to invest Section -->
+
+    <section class="invest-section" id="invest">
+      <div class="invest-left">
+        <div class="invest-content">
+          <h2 data-i18n="invest.title" class="invest-section-title">
+            Why to invest?
+          </h2>
+          <div class="paragraphs">            
+            <div class="paragraph">
+              <h3
+                class="paragraph-h3"
+                data-i18n="invest.reasons.location.title"
+              >
+                Strategic Location
+              </h3>
+              <p class="paragraph-p" data-i18n="invest.reasons.location.text">
+                Located in one of the most dynamic, sought-after areas with the
+                highest quality of life in Mexico City. La Condesa offers a
+                unique blend of urban nature, vibrant social life, and proximity
+                to the city's main business and cultural hubs.
+              </p>
+            </div>
+            <div class="paragraph">
+              <h3
+                class="paragraph-h3"
+                data-i18n="invest.reasons.conectivity.title"
+              >
+                Connectivity & Mobility
+              </h3>
+              <p
+                class="paragraph-p"
+                data-i18n="invest.reasons.conectivity.text"
+              >
+                The location provides easy access to major avenues like
+                Insurgentes and Nuevo León, as well as nearby metro, Metrobús,
+                and Ecobici stations, ensuring seamless mobility throughout the
+                city.
+              </p>
+            </div>
+            <div class="paragraph">
+              <h3
+                class="paragraph-h3"
+                data-i18n="invest.reasons.gastronomy.title"
+              >
+                Gastronomic & Cultural Scene
+              </h3>
+              <p class="paragraph-p" data-i18n="invest.reasons.gastronomy.text">
+                A lively neighborhood with high foot traffic and a rich
+                atmosphere. The area's diverse culinary scene, constant cultural
+                offerings, and lifestyle appeal make Condesa one of the most
+                desirable places to live, whether for rental investment or
+                personal use.
+              </p>
+            </div>
+            
+            <div class="paragraph">
+              <h3 class="paragraph-h3" data-i18n="invest.reasons.value.title">
+                Consistently Growing Value
+              </h3>
+              <p class="paragraph-p" data-i18n="invest.reasons.value.text">
+                Investing here means securing your assets in one of the most
+                stable and high-potential real estate markets, with strong
+                medium- and long-term appreciation.
+              </p>
+            </div>            
+          </div>
+        </div>
+      </div>
+      <div class="invest-right"></div>
+    </section>
+
+    <!-- FAQs Section -->
+
+    <section class="faqs-section" id="faqs">
+      <h2 class="faqs-title" data-i18n="faqs.title">FAQs</h2>
+
+      <div class="faqs-container">
+        <!-- Las preguntas se generarán dinámicamente con JS -->
+      </div>
+
+      <button
+        class="faqs-view-more"
+        data-i18n="faqs.viewMore"
+        aria-label="View mor Faqs"
+      >
+        View more
+      </button>
+
+      <!-- <div class="questions">
+        <h3 class="questions-title" data-i18n="questions.title">
+          Questions? We've got you
+        </h3>
+        <a
+          href=""
+          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cnsg-w9y-9jp/the-wavve-condos-in-baja?background_color=faf0e6&text_color=3f3f3f&primary_color=523c57'});return false;"
+          role="button"
+          class="book-call"
+          data-i18n="book.call"
+          aria-label="Book a call"
+        >
+          Book a call now
+        </a>
+      </div> -->
+    </section>
+
+    <!-- Visual Rest 2 Section -->
+    <!-- <section class="rest-pier">
+      <div class="rest-pier-container">
+        <img
+          src="assets/img/rest-section-pier-opt.webp"
+          alt="Photograph of a nice woman taking a sip at the pier"
+          loading="lazy"
+        />
+      </div>
+    </section> -->
+
+    <!-- Instagram Feed Section -->
+    <!-- <section class="custom-ig-feed">
+      <h2 class="ig-feed-title">#THEWAVVEBAJA</h2>
+      <div class="ig-grid">
+        <div class="ig-post">
+          <div class="thumbnail">
+            <a
+              class="ig-thumbnail"
+              href="https://www.instagram.com/reel/DAUT4w_PCxJ/"
+              target="_blank"
+            >
+              <img
+                src="assets/img/instagram-feed-thumb-1.webp"
+                alt="Post from Instagram"
+              />
+            </a>
+          </div>
+          <div class="view-post-button">
+            <a
+              href="https://www.instagram.com/reel/DAUT4w_PCxJ/"
+              target="_blank"
+              class="view-post"
+              data-i18n="view.post.btn"
+              >View post</a
+            >
+          </div>
+        </div>
+        <div class="ig-post">
+          <div class="thumbnail">
+            <a
+              class="ig-thumbnail"
+              href="https://www.instagram.com/reel/DHuKBucSa03/"
+              target="_blank"
+            >
+              <img
+                src="assets/img/instagram-feed-thumb-2.webp"
+                alt="Post from Instagram"
+              />
+            </a>
+          </div>
+          <div class="view-post-button">
+            <a
+              href="https://www.instagram.com/reel/DHuKBucSa03/"
+              target="_blank"
+              class="view-post"
+              data-i18n="view.post.btn"
+              >View post</a
+            >
+          </div>
+        </div>
+        <div class="ig-post">
+          <div class="view-post-thumbnail">
+            <a
+              class="ig-thumbnail"
+              href="https://www.instagram.com/reel/DH42TWIthDH/"
+              target="_blank"
+            >
+              <img
+                src="assets/img/instagram-feed-thumb-3.webp"
+                alt="Post from Instagram"
+              />
+            </a>
+          </div>
+          <div class="view-post-button">
+            <a
+              href="https://www.instagram.com/reel/DH42TWIthDH/"
+              target="_blank"
+              class="view-post"
+              data-i18n="view.post.btn"
+              >View post</a
+            >
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Full Documents Section -->
+    <!-- <section class="full-documents">
+      <div class="full-documents-content">
+        <h2 class="full-documents-title" data-i18n="full.documents.title">
+          ACCESS FULL DOCUMENTS
+        </h2>
+        <div class="doc-links">
+          <a
+            href="assets/media/brochure-the-wavve-01072025.pdf"
+            target="_blank"
+            data-i18n="the.wavve.guide.btn"
+            >The Wavve</a
+          >
+          <a
+            href="assets/media/THE_WAVVE_BUYERS_GUIDE_14072025.pdf"
+            target="_blank"
+            data-i18n="buyers.guide.btn"
+            >Buyer's Guide</a
+          >
+          <a
+            href="assets/media/THE_WAVVE_LEGAL_GUIDE_FOR_US_CITIZENS_14072025.pdf"
+            target="_blank"
+            data-i18n="legal.buying.btn"
+            >Legal Buying from U.S.</a
+          >
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Contact Section -->
+
+    <section class="contact-section" id="contact">
+      <div class="contact-container">
+        <h2 class="contact-title" data-i18n="contact.title">GET IN TOUCH</h2>
+
+        <form class="contact-form">
+          <input
+            type="text"
+            id="name"
+            placeholder="* NAME"
+            data-i18n="form.name"
+          />
+          <input
+            type="email"
+            id="email"
+            placeholder="* EMAIL"
+            data-i18n="form.email"
+          />
+          <div class="phone-group">
+            <div class="phone-select">
+              <select id="country_code" required>
+                <option
+                  value=""
+                  disabled
+                  selected
+                  data-i18n="form.country.code"
+                >
+                  * COUNTRY CODE
+                </option>
+              </select>
+            </div>
+            <div class="phone-input">
+              <input
+                type="tel"
+                id="phone"
+                placeholder="* PHONE"
+                data-i18n="form.phone"
+              />
+            </div>
+          </div>
+
+          <h3 class="contact-method" data-i18n="contact.method">
+            CONTACT METHOD
+          </h3>
+          <div class="contact-methods">
+            <div class="contact-item">
+              <label>
+                <input
+                  type="radio"
+                  name="contact"
+                  id="opt_whatsapp"
+                  value="whatsapp"
+                />
+                <span data-i18n="cm.whats">WHATSAPP</span>
+              </label>
+            </div>
+            <div class="contact-item">
+              <label>
+                <input type="radio" name="contact" id="opt_mail" value="mail" />
+                <span data-i18n="cm.mail">MAIL</span>
+              </label>
+            </div>
+            <div class="contact-item">
+              <label>
+                <input
+                  type="radio"
+                  name="contact"
+                  id="opt_phone"
+                  value="phone"
+                />
+                <span data-i18n="cm.call">PHONE CALL</span>
+              </label>
+            </div>
+            <div class="contact-item">
+              <label>
+                <input type="radio" name="contact" id="opt_sms" value="sms" />
+                <span data-i18n="cm.sms">SMS/IMESSAGE</span>
+              </label>
+            </div>
+          </div>
+
+          <h3 class="contact-method" data-i18n="type.of.client">
+            WHAT BEST DESCRIBES YOUR INTEREST?
+          </h3>
+          <div class="type-of-clients">
+            <div class="contact-item">
+              <label>
+                <input
+                  type="radio"
+                  name="client"
+                  id="opt_client"
+                  value="client"
+                />
+                <span data-i18n="type.client">CLIENT</span>
+              </label>
+            </div>
+            <div class="contact-item">
+              <label>
+                <input
+                  type="radio"
+                  name="client"
+                  id="opt_investor"
+                  value="investor"
+                />
+                <span data-i18n="type.investor">INVESTOR</span>
+              </label>
+            </div>
+            <div class="contact-item">
+              <label>
+                <input
+                  type="radio"
+                  name="client"
+                  id="opt_broker"
+                  value="broker"
+                />
+                <span data-i18n="type.broker">BROKER</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="send-button-container">
+            <button
+              href=""
+              role="button"
+              class="submit-form"
+              data-i18n="form.send.button"
+            >
+              Send
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Rooftop Section -->
+    <!-- <section class="rooftop-section-continer">
+      <div class="info-rooftop">
+        <h3 class="rooftop-title" data-i18n="rooftop.title">
+          ALREADY PART OF THE WAVVE?
+        </h3>
+        <p class="rooftop-subtitle" data-i18n="rooftop-subtilte">
+          Host your next event at the Showroom Rooftop
+        </p>
+        <p class="rooftop-info" data-i18n="rooftop.info">
+          As a resident of The Wavve, you're welcome to reserve the showroom's
+          oceanfront rooftop — an ideal setting for private events, small
+          celebrations, or sunset meetings with friends and family.
+        </p>
+        <div class="reserve-roof-button">
+          <a href="#contact" class="reserve-rooftop" data-i18n="reserve.rooftop"
+            >Reserve the Rooftop</a
+          >
+        </div>
+        <div class="disclaimer">
+          <p class="disclaimer-info">
+            <i data-i18n="disclaimer.info"
+              >Only for owners in The Wavve community.</i
+            >
+          </p>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Custom divider -->
+
+    <hr class="custom-divider" />
+
+    <!-- Footer Section -->
+
+    <footer class="main-footer">
+      <div class="footer-content">
+        <!-- Logo principal -->
+        <div class="footer-logo">
+          <img src="assets/img/logo-footer.svg" alt="The Wavve Logo" />
+        </div>
+
+        <!-- Columnas centrales -->
+        <div class="footer-columns">
+          <!-- <div class="footer-col">
+            <a
+              href="https://estrategiaurbana.com.mx"
+              target="_blank"
+              data-i18n="footer.developer"
+              >Developed by Estrategia Urbana</a
+            >
+          </div> -->
+          <div class="footer-col">
+            <a href="#terms-content" class="glightbox" data-i18n="footer.terms">
+              Terms of Use
+            </a>
+          </div>
+          <div class="footer-col">
+            <a
+              href="#privacy-content"
+              class="glightbox"
+              data-i18n="footer.privacy"
+              >Privacy Policy
+            </a>
+          </div>
+          <div class="footer-col contact-info">
+            <div>
+              <!-- <a href="tel:+526643086503">mx: +52 664 308 6503</a><br /> -->
+              <a href="mailto:info@covachilpancingo.com">info@covachilpancingo.com</a>
+            </div>
+            <div class="address">
+              <a
+                href="https://maps.app.goo.gl/6ybp6oBceba24NYb9"
+                target="_blank"
+                >C. Chilpancingo 54. Hipódromo Condesa. <br>
+                Cuauhtémoc. 06100. CDMX.</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Redes sociales -->
+        <!-- <div class="footer-socials">
+          <a
+            href="https://www.facebook.com/covachilpancingo"
+            target="_blank"
+            aria-label="Facebook"
+          >
+            <img src="assets/ico/ico-fb.svg" alt="Facebook logo" />
+          </a>
+          <a
+            href="https://www.instagram.com/thewavvebaja/"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <img src="assets/ico/ico-ig.svg" alt="Instagram logo" />
+          </a>
+        </div> -->
+      </div>
+    </footer>
+
+    <!-- Modales Ocultos -->
+    <!-- Privacy Policy -->
+    <div id="privacy-content" class="glightbox-privacy">
+      <h2 class="privacy-title">Privacy Notice</h2>
+      <p>
+        Based on Articles 15, 16, and other applicable provisions of the Federal
+        Law on Protection of Personal Data Held by Private Parties (the "Law")
+        and its regulations, we inform you that PROMOTORA ESTRATEGIA URBANA,
+        S.A. DE C.V. (hereinafter "PEU"), with address at Av. Cordillera de los
+        Andes #120, Lomas de Chapultepec, Miguel Hidalgo, CDMX 11000, and
+        website www.estrategiaurbana.com.mx, is responsible for collecting,
+        using, and protecting Personal Data, in compliance with the principles
+        of legality, quality, consent, information, purpose, loyalty,
+        proportionality, and responsibility.
+      </p>
+      <p>
+        Personal Data is collected through sales offices, email, telephone,
+        databases, and the website, and is used exclusively for real estate
+        transactions.
+      </p>
+      <p>
+        We understand that the personal data of third parties (e.g., personal or
+        commercial references) that you provide us with have already been
+        authorized by their owner to be delivered and processed by us according
+        to this privacy notice.
+      </p>
+      <p>
+        The primary purposes for the Personal Data (the "Primary Purposes") are:
+        (a) to identify you as a client or interested party in our
+        products/services; (b) to understand your needs; (c) to contact you and
+        follow up on your interest in purchasing real estate; (d) to send you
+        information about our real estate projects; (e) to prepare documents,
+        contracts, agreements, invoices, receipts, and documentation related to
+        the acquisition of private units of the projects advertised on our
+        website; (f) to handle complaints and clarifications; (h) to evaluate
+        quality and/or sales follow-up; (i) to store data; and (j) to comply
+        with terms and conditions established with you; (k) to check credit
+        history; (l) to process insurance claims and obligations with clients,
+        including acquiring a policy; (m) to fulfill tax obligations, such as
+        issuing invoices; (n) to manage collections; (ñ) to comply with various
+        authorities' requirements; (o) to conduct marketing activities,
+        advertising, and market behavior analysis.
+      </p>
+      <p>
+        The secondary purposes for Personal Data (the "Secondary Purposes") are:
+        (a) to inform you about new developments and promotions of our various
+        real estate projects.
+      </p>
+      <p>
+        The confidentiality of Personal Data is guaranteed and protected by
+        administrative, technical, and physical security measures to prevent
+        damage, loss, alteration, destruction, misuse, unauthorized access, or
+        disclosure. For example, Personal Data is stored in an internal database
+        managed through periodically changing access keys, restricted to
+        authorized personnel, and governed by confidentiality agreements.
+      </p>
+      <p>
+        You have the right to access, rectify, cancel, or oppose the processing
+        of your Personal Data (collectively known as "ARCO Rights"). To do so,
+        you or your legal representative must submit a written request for the
+        exercise of ARCO Rights addressed to the PEU customer service department
+        responsible for Personal Data protection, located at the aforementioned
+        address, or communicate via email with the PEU customer service
+        department at info@estrategiaurbana.com.mx ("Request"); in both cases,
+        you must receive acknowledgment of receipt for PEU to be bound. The
+        Request should include the following information: (a) your name and
+        surname and that of your representative, if applicable; (b) email
+        address for notifications; (c) a simple copy of your official photo ID
+        or that of your representative, if applicable; (d) clear and precise
+        description of the Personal Data for which you seek to exercise any of
+        the ARCO Rights; (f) any element or document that facilitates the
+        location of your Personal Data; and (g) your or your representative's
+        signature.
+      </p>
+      <p>
+        In case of requesting the exercise of the right to: (a) Rectification,
+        you must indicate the modifications to be made and provide the
+        documentation supporting the request; and (b) Access, PEU will provide
+        the Personal Data via email and/or by appointment at the sales office
+        and/or administrative offices, at PEU's choice.
+      </p>
+      <p>
+        Within a maximum period of 5 business days from the acknowledgment of
+        receipt of the Request, the request must be addressed and you will be
+        informed of its acceptance or rejection via a notice sent to the email
+        provided for notifications. If your Request is accepted, PEU must
+        fulfill it within 15 business days following receipt via email of the
+        acceptance of your Request.
+      </p>
+      <p>
+        Additionally, to the procedure for exercising ARCO Rights, you have the
+        right, concerning Secondary Purposes, to: (a) revoke or express your
+        refusal for the processing of your Personal Data; and/or (b) be included
+        in PEU's "Exclusion List," which limits the use and disclosure of
+        Personal Data. To do so, you must send a request to revoke or be
+        excluded, which should include: (a) your name and surname; and (b) email
+        address to respond to your request. This request should be addressed to
+        the PEU customer service department at info@estrategiaurbana.com.mx,
+        with acknowledgment of receipt required for PEU to be bound. The
+        acknowledgment of receipt includes confirmation of revocation and/or
+        inclusion in the "Exclusion List." PEU has a maximum response time of 5
+        business days.
+      </p>
+      <p>
+        All documentation must be sent in readable and complete PDF format for
+        PEU to address the Request.
+      </p>
+      <p>
+        If you believe your personal data protection rights have been violated
+        by PEU or presume there is any violation of the Law in the processing of
+        your personal data, you may file a complaint or report with the Federal
+        Institute of Access to Information and Data Protection (IFAI) at
+        www.ifai.gob.mx within 15 days of receiving PEU's response or after the
+        20-day period from the acknowledgment of receipt of the Request has
+        elapsed.
+      </p>
+      <p>
+        PEU is a real estate marketing and sales company. Therefore, Personal
+        Data may be transferred to subsidiaries, affiliates, parent companies,
+        co-owners, business partners, and/or third parties, all in the real
+        estate sector, domestically or internationally, for the same purposes
+        mentioned, especially for real estate marketing. It may also be
+        transferred to the following entities: authorized financial
+        institutions, public or private, including INFONAVIT; notaries; property
+        managers; appraisers; and any other necessary parties to fulfill the
+        purposes for which you contacted us.
+      </p>
+      <p>
+        The information you provide to social networks and its management is not
+        our responsibility, so you should review each network's Privacy Notice.
+        Therefore, we commit to not transferring your information to
+        unauthorized third parties or those unrelated to PEU, except as stated
+        in Article 37 of the Federal Law on Protection of Personal Data Held by
+        Private Parties.
+      </p>
+      <p>
+        PEU reserves the right to modify this security and confidentiality
+        policy, so we recommend you periodically review this policy to be aware
+        of updates and new ways we protect your data.
+      </p>
+    </div>
+
+    <!-- Terms of use -->
+    <div id="terms-content" class="glightbox-terms">
+      <h3 class="terms-title">Terms of Use</h3>
+      <p><strong>Last updated:</strong> July 10, 2025</p>
+      <h4>1. Use of the Website</h4>
+      <p>
+        This website is intended to provide information about our products and
+        services. All content is for informational purposes only and may be
+        changed without notice. We do not guarantee that the information is
+        always accurate, complete, or up to date.
+      </p>
+      <h4>2. Collection of Personal Data</h4>
+      <p>
+        When you use our contact forms, we may collect the following
+        information:
+      </p>
+      <ul>
+        <li>Full name</li>
+        <li>Email address</li>
+        <li>Phone number</li>
+      </ul>
+      <p>
+        This information is used solely to contact you and provide you with
+        relevant information about our services.
+      </p>
+      <h4>3. Tracking Technologies</h4>
+      <p>
+        We may use tools such as <strong>Google Analytics</strong> and
+        <strong>Meta Pixel</strong> to collect anonymous user interaction data,
+        including:
+      </p>
+      <ul>
+        <li>Pages visited</li>
+        <li>Time spent on the website</li>
+        <li>Device and browser type</li>
+        <li>Conversion behavior</li>
+      </ul>
+      <p>
+        This data is used for statistical purposes and to improve user
+        experience and advertising performance.
+      </p>
+      <h4>4. Data Protection</h4>
+      <p>
+        We are committed to protecting your personal information. We do not
+        share, sell, or rent your data to third parties unless required by law.
+      </p>
+      <h4>5. Intellectual Property</h4>
+      <p>
+        All content on this site (text, images, logos, etc.) is the property of
+        the website owner and is protected by copyright laws. Any unauthorized
+        use is strictly prohibited.
+      </p>
+      <h4>6. Changes</h4>
+      <p>
+        We reserve the right to update these Terms of Use at any time. We
+        encourage you to review this page periodically.
+      </p>
+      <h4>7. Contact</h4>
+      <p>
+        If you have any questions regarding these Terms of Use or how we handle
+        your personal data, please contact us at:
+        <a href="mailto:info@covachilpancingo.com">info@thewavvebaja.com</a>
+      </p>
+    </div>
+  </body>
+
+  <!-- Calendly Js -->
+  <script
+    src="https://assets.calendly.com/assets/external/widget.js"
+    type="text/javascript"
+    async
+  ></script>
+
+  <!-- Map Dependencies -->
+  <script src="js/maps-optimized.js"></script>
+
+  <!-- GLightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Modulos JS-->
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/form.js"></script>
+</html>

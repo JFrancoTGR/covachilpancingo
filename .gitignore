@@ -1,0 +1,5 @@
+# Carpeta de recursos
+/recursos/
+
+# Claves
+.env
