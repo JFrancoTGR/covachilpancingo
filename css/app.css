@@ -434,7 +434,7 @@ body {
   margin-bottom: 1rem;
   text-align: center;
   font-size: 2.1rem;
-  color: var(--secondary-color)
+  color: var(--secondary-color);
 }
 
 .inner {
@@ -444,11 +444,8 @@ body {
 
 .inner-left > div,
 .inner-right > div {
-  /* background: #fafafa;
-  border: 1px dashed #ddd;
-  border-radius: 8px; */
   padding: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 24px;
 }
 
 .inner-right > div {
@@ -658,21 +655,21 @@ body {
 
 /* TIPOLOGIES SLIDER */
 .tipologias-swiper {
-  max-width: 620px;  
-  margin: 0 auto;     
-  height: auto;       
+  max-width: 620px;
+  margin: 0 auto;
+  height: auto;
 }
 
 .tipologias-swiper .swiper-slide {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
 }
 
 .tipologias-swiper img {
   display: block;
-  max-width: 100%;  
-  height: auto;     
+  max-width: 100%;
+  height: auto;
   object-fit: contain;
 }
 
@@ -709,7 +706,7 @@ body {
 }
 
 .parallax-divider::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: -12% 0;
   background-image: url('../assets/img/divisor-parallax.webp');
@@ -748,7 +745,6 @@ body {
     transform: none !important;
   }
 }
-
 
 /* INTERACTIVE MAP */
 /* .interactive-map {
@@ -1123,11 +1119,10 @@ path {
   height: 150px;
 }
 
-.sealIcon img{
+.sealIcon img {
   width: 100px;
   height: 100px;
 }
-
 
 /* CREATIVES & CREATORS SECTION */
 .creatives-swiper {
@@ -1755,9 +1750,9 @@ textarea::placeholder {
   text-align: center;
 }
 
-.type-of-clients{
+.type-of-clients {
   display: grid;
-  grid-template-columns:  1fr 1fr 1fr;;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
   text-align: center;
 }
@@ -1799,7 +1794,7 @@ textarea::placeholder {
   color: var(--primary-color);
 }
 
-.submit-form:disabled{
+.submit-form:disabled {
   cursor: not-allowed;
   opacity: 0.4;
   pointer-events: none;
@@ -2433,6 +2428,22 @@ textarea::placeholder {
   }
   .custom-next {
     right: 5px;
+  }
+
+  /* WALKING DISTANCE */
+  .walking-driving {
+    gap: 1rem;
+    padding: 1.3rem;
+  }
+
+  .inner{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .inner-left > div,
+  .inner-right > div {
+    /* padding: 0.5rem; */
+    font-size: 16px;
   }
 
   /* EXPERIENCES SLIDER*/

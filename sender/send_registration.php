@@ -59,7 +59,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 // Normalizar teléfono (solo dígitos)
-$phone = preg_replace('/\D+/', '', $phoneIncoming);
+$phone = preg_replace('/[^\d+]/', '', $phoneIncoming);
 
 // Configuración API externo
 $API_URL    = 'https://api-3.capisoftware.com.mx/eu/capi-b/public/api/services/social_media/catch';
