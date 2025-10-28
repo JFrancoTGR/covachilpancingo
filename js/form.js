@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const utm_term = params.get('utm_term') || '';
 
   // === CONFIGURABLE: endpoint actual y futuro ===
-  const API_ENDPOINT = '/covachilpancingo/sender/send_registration.php';
+  const API_ENDPOINT = '/../sender/send_registration.php';
   // Para API de terceros: const API_ENDPOINT = 'https://api.tercero.com/v1/endpoint';
 
   submitButton.addEventListener('click', async function (e) {

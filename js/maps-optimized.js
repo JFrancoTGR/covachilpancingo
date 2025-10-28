@@ -401,7 +401,7 @@ const observer = new IntersectionObserver(
     if (entries[0].isIntersecting) {
       const script = document.createElement('script');
       script.src =
-        'https://maps.googleapis.com/maps/api/js?key=MI_API_KEY&callback=initMap&loading=async';
+        'https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap&loading=async';
       script.async = true;
       window.initMap = initMap;
       document.head.appendChild(script);
