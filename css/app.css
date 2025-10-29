@@ -79,6 +79,18 @@ body {
   font-size: 12px;
 }
 
+/* reCaptcha */
+.grecaptcha-badge {
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: block !important;
+  position: fixed !important;   /* asegura posición global */
+  right: 16px !important;       /* prueba cambiar a left si algo lo tapa */
+  bottom: 16px !important;
+  z-index: 2147483647 !important; /* encima de todo */
+}
+
+/* Anchors */
 #location {
   scroll-margin-top: 80px;
 }

@@ -35,12 +35,53 @@ document.addEventListener('DOMContentLoaded', function () {
   );
   observer.observe(formSection);
 
+  async function ensureSwalReady() {
+    if (window.Swal) return true;
+    // espera activa hasta 1.5s
+    for (let i = 0; i < 15; i++) {
+      if (window.Swal) return true;
+      await new Promise((r) => setTimeout(r, 100));
+    }
+    return !!window.Swal;
+  }
+
   const submitButton = document.querySelector('.submit-form');
   let isSending = false;
 
   // Texto del botón según idioma
   const originalButtonHTML = translations[currentLanguage]['form.send.button'];
   submitButton.innerHTML = originalButtonHTML;
+
+  // reCaptcha v2
+
+  let recaptchaWidgetId = null;
+  function initRecaptcha() {
+    const RECAPTCHA_SITE_KEY = window.RECAPTCHA_SITE_KEY;
+
+    // grecaptcha puede tardar en estar listo; esperamos que el script se haya cargado
+    if (window.grecaptcha && typeof grecaptcha.render === 'function') {
+      // render en un div que creamos dinámicamente y ocultamos
+      let container = document.getElementById('recaptcha-container');
+      if (!container) {
+        container = document.createElement('div');
+        container.id = 'recaptcha-container';
+        container.style.visibility = 'hidden';
+        container.style.height = '0';
+        document.body.appendChild(container);
+      }
+      // renderiza invisible widget y guarda id para ejecutar
+      recaptchaWidgetId = grecaptcha.render(container, {        
+        sitekey: RECAPTCHA_SITE_KEY,
+        size: 'invisible',
+        // NOTA: no necesitamos callback aquí; usaremos grecaptcha.execute(widgetId)
+      });
+      // console.log('reCAPTCHA renderizado con ID:', recaptchaWidgetId)
+    } else {
+      // si grecaptcha aún no está disponible, intentamos de nuevo en 300ms
+      setTimeout(initRecaptcha, 300);
+    }
+  }
+  initRecaptcha();
 
   // UTM params
   const params = new URLSearchParams(window.location.search);
@@ -56,7 +97,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const API_ENDPOINT = '/../sender/send_registration.php';
   // Para API de terceros: const API_ENDPOINT = 'https://api.tercero.com/v1/endpoint';
 
-  submitButton.addEventListener('click', async function (e) {
+  const formEl = document.querySelector('.contact-form');
+  formEl.addEventListener('submit', async function (e) {
     e.preventDefault();
     if (isSending) return;
 
@@ -65,15 +107,22 @@ document.addEventListener('DOMContentLoaded', function () {
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const phoneRaw = document.getElementById('phone').value.trim();
-    const countrySelected = document.getElementById('country_code').value.trim();
-    const contact_method = document.querySelector('input[name="contact"]:checked');
-    const type_of_client = document.querySelector('input[name="client"]:checked');
+    const countrySelected = document
+      .getElementById('country_code')
+      .value.trim();
+    const contact_method = document.querySelector(
+      'input[name="contact"]:checked'
+    );
+    const type_of_client = document.querySelector(
+      'input[name="client"]:checked'
+    );
 
     // Validaciones
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const completePhone = countrySelected + phoneRaw.replace(/\D/g, '');
 
     if (!name || !email || !phoneRaw || !countrySelected) {
+      await ensureSwalReady();
       Swal.fire({
         icon: 'warning',
         title: translations[currentLanguage].swal.warningTitle,
@@ -85,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (!emailRegex.test(email)) {
+      await ensureSwalReady();
       Swal.fire({
         icon: 'warning',
         title: translations[currentLanguage].swal.errorTitle,
@@ -96,6 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (!/^\+\d{7,15}$/.test(completePhone)) {
+      await ensureSwalReady();
       Swal.fire({
         icon: 'warning',
         title: translations[currentLanguage].swal.errorTitle,
@@ -107,6 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (!contact_method) {
+      await ensureSwalReady();
       Swal.fire({
         icon: 'warning',
         title: translations[currentLanguage].swal.errorTitle,
@@ -118,6 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (!type_of_client) {
+      await ensureSwalReady();
       Swal.fire({
         icon: 'warning',
         title: translations[currentLanguage].swal.errorTitle,
@@ -150,44 +203,93 @@ document.addEventListener('DOMContentLoaded', function () {
       utm_term,
     };
 
-    try {
-      const res = await fetch(API_ENDPOINT, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        // Si tu endpoint externo requiere auth, aquí agregas el header:
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(payload),
-      });
-
-      // Si es PHP que devuelve JSON con {status:'success'|'error'}
-      const data = await res.json().catch(() => ({}));
-
-      if (res.ok && (data.status === 'success' || data.ok === true)) {
-        Swal.fire({
-          icon: 'success',
-          title: translations[currentLanguage].swal.successTitle,
-          text: translations[currentLanguage].swal.successText,
+    // función que envía el payload al backend (igual a tu fetch actual)
+    async function sendPayload(finalPayload) {
+      try {
+        const res = await fetch(API_ENDPOINT, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify(finalPayload),
         });
-        document.querySelector('.contact-form').reset();
-      } else {
+
+        const data = await res.json().catch(() => ({}));
+
+        if (res.ok && (data.status === 'success' || data.ok === true)) {
+          Swal.fire({
+            icon: 'success',
+            title: translations[currentLanguage].swal.successTitle,
+            text: translations[currentLanguage].swal.successText,
+          });
+          document.querySelector('.contact-form').reset();
+        } else {
+          Swal.fire({
+            icon: 'error',
+            title: translations[currentLanguage].swal.errorTitle,
+            text: translations[currentLanguage].swal.sendingError,
+          });
+        }
+      } catch (err) {
         Swal.fire({
           icon: 'error',
           title: translations[currentLanguage].swal.errorTitle,
           text: translations[currentLanguage].swal.sendingError,
         });
+      } finally {
+        isSending = false;
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonHTML;
       }
-    } catch (err) {
+    }
+
+    // Ejecutar grecaptcha y luego enviar
+    if (window.grecaptcha && recaptchaWidgetId !== null) {
+      // ejecuta el widget invisible; el token cae en callback de execute (promisify)
+      try {
+        const token = await new Promise((resolve, reject) => {
+          grecaptcha
+            .execute(recaptchaWidgetId)
+            .then(function (tkn) {
+              resolve(tkn);
+            })
+            .catch(function (err) {
+              reject(err);
+            });
+          // Fallback timeout por si algo falla: 8s
+          setTimeout(() => reject(new Error('recaptcha_timeout')), 8000);
+        });
+
+        // adjuntar token al payload
+        payload.g_recaptcha_token = token;
+        payload.captcha_version = 'v2_invisible';
+
+        // finalmente envía
+        await sendPayload(payload);
+      } catch (recapErr) {
+        // si reCAPTCHA falla localmente, informamos al usuario y no enviamos datos
+        Swal.fire({
+          icon: 'error',
+          title: translations[currentLanguage].swal.errorTitle,
+          text: 'No se pudo validar el captcha. Intenta de nuevo por favor.',
+        });
+        isSending = false;
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonHTML;
+        return;
+      }
+    } else {
+      // Si grecaptcha no está disponible (rare), no enviamos: mejor bloquear que crear perfiles basura
       Swal.fire({
         icon: 'error',
         title: translations[currentLanguage].swal.errorTitle,
-        text: translations[currentLanguage].swal.sendingError,
+        text: 'Captcha no disponible. Intenta de nuevo más tarde.',
       });
-    } finally {
       isSending = false;
       submitButton.disabled = false;
       submitButton.innerHTML = originalButtonHTML;
+      return;
     }
   });
 });
